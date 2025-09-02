@@ -14,7 +14,7 @@ return [
     */
 
     'failed' => 'These credentials do not match our records.',
-    'password' => 'The provided password is incorrect.',
+    'password_error' => 'The provided password is incorrect.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
     'login' => 'Login',
@@ -23,7 +23,7 @@ return [
     'to_publish_your_activities' => "To publish your services and activities",
 
     'email' => 'Email',
-    'password_error' => 'Password',
+    'password' => 'Password',
     'remember_me' => 'Remember me',
     'forgot_password' => 'Forgot password?',
     'sign_in' => 'Sign in',

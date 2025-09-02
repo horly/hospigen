@@ -23,6 +23,7 @@ return [
     'to_publish_your_activities' => "Pour publier vos services et activités",
 
     'email' => 'E-mail',
+    'password' => 'Mot de passe',
     'remember_me' => 'Se souvenir de moi',
     'forgot_password' => 'Mot de passe oublié?',
     'sign_in' => 'S\'identifier',

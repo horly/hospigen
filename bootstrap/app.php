@@ -24,6 +24,7 @@ return Application::configure(basePath: dirname(__DIR__))
 
         $middleware->alias([
             'check.license' => \App\Http\Middleware\CheckLicenseExpiration::class,
+            'admin' => \App\Http\Middleware\Admin::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

@@ -51,4 +51,24 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Models\Role', 'role_id');
     }
+
+    public function notifications()
+    {
+        return $this->hasMany('App\Models\Notification');
+    }
+
+    public function read()
+    {
+        return $this->hasMany('App\Models\ReadNotif');
+    }
+
+    public function send()
+    {
+        return $this->hasMany('App\Models\ReadNotif');
+    }
+
+    public function permissions()
+    {
+        return $this->hasMany('App\Models\Permission');
+    }
 }

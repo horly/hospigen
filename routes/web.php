@@ -38,10 +38,20 @@ Route::controller(LoginController::class)->group(function(){
     Route::post('/create_user', 'create_user')->name('app_create_user');
     Route::post('/create_user_admin', 'create_user_admin')->name('app_create_user_admin');
 
+    Route::middleware(['auth', 'admin'])->group(function(){
+        Route::get('/user_management', 'user_management')->name('app_user_management');
+        Route::post('/save_permission', 'save_permission')->name('app_save_permission');
+        Route::get('/add_user/{id:int}', 'add_user')->name('app_add_user');
+        Route::post('/delete_user', 'delete_user')->name('app_delete_user');
+    });
+
 });
 
 Route::controller(MainController::class)->group(function(){
     Route::middleware(['auth', 'check.license'])->group(function () {
+        Route::match(['post', 'get'], '/read_notification', 'read_notification')->name('app_read_notification');
+        Route::get('/all_notification', 'all_notification')->name('app_all_notification');
+        Route::get('/unviewed_notifications', 'unviewed_notifications')->name('app_unviewed_notifications');
         Route::get('/main', 'main')->name('app_main');
     });
 });
